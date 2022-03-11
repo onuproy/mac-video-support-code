@@ -1,0 +1,30 @@
+/// HTML	
+<?php 
+		$video_mp4_video =get_field('video_mp4_video');
+	 ?>
+
+
+	<section class="hero_video_section">
+		<div class="dog_video">
+			<video autoplay id="home_video"  controls preload="auto" autoplay="autoplay" loop muted playsinline  class="background-video-area">
+				<source src="<?php echo $video_mp4_video['url']; ?>" type="video/mp4">
+			</video>
+		</div>
+	</section>
+
+
+///Js
+	const videoElement = document.getElementById('home_video');
+        if (videoElement.playing) {
+            // video is already playing so do nothing
+        }
+        else {
+            // video is not playing
+            // so play video now
+            videoElement.play();
+        }
+
+//Css
+.dog_video video {
+	width: 100%;
+}
